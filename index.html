@@ -1,0 +1,470 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gifts Hamper Box | Order Tracking </title>
+
+<style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #090b10;
+  color: #fff;
+  min-height: 100vh;
+  padding: 22px 14px;
+}
+
+.container {
+  max-width: 650px;
+  margin: auto;
+}
+
+.brand {
+  text-align: center;
+  margin: 15px 0 28px;
+}
+
+.logo {
+  font-size: 42px;
+  color: #e8c879;
+}
+
+.brand h1 {
+  letter-spacing: 3px;
+  font-size: 23px;
+  margin: 10px 0;
+}
+
+.brand p {
+  color: #aaa;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+.demo-banner {
+  background: #29230f;
+  color: #f5dc91;
+  border: 1px solid #80662c;
+  padding: 12px;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 12px;
+  margin-bottom: 18px;
+  line-height: 1.6;
+}
+
+.card {
+  background: linear-gradient(145deg, #1b1d25, #101116);
+  border: 1px solid #34313a;
+  border-radius: 20px;
+  padding: 23px;
+  margin-bottom: 18px;
+  box-shadow: 0 12px 35px #0006;
+}
+
+h2 {
+  font-size: 19px;
+  margin-bottom: 10px;
+}
+
+.muted {
+  color: #aaa;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+input, button {
+  width: 100%;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 15px;
+  margin-top: 14px;
+}
+
+input {
+  background: #090b10;
+  color: white;
+  border: 1px solid #49434b;
+  outline: none;
+}
+
+input:focus {
+  border-color: #e8c879;
+}
+
+button {
+  background: linear-gradient(90deg, #b88b35, #f5df9a);
+  color: #17130a;
+  font-weight: bold;
+  border: 0;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: .9;
+}
+
+.hidden {
+  display: none;
+}
+
+.badge {
+  display: inline-block;
+  color: #f5dc91;
+  background: #5b471b55;
+  border: 1px solid #b89545;
+  padding: 8px 12px;
+  border-radius: 30px;
+  font-size: 11px;
+  margin: 10px 0;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 15px;
+  padding: 14px 0;
+  border-bottom: 1px solid #333;
+}
+
+.info span:first-child {
+  color: #aaa;
+  font-size: 13px;
+  flex: 1;
+}
+
+.info span:last-child {
+  text-align: right;
+  font-size: 13px;
+  flex: 1.4;
+  overflow-wrap: anywhere;
+}
+
+.charge {
+  margin-top: 20px;
+  padding: 17px;
+  border-radius: 12px;
+  background: #211d13;
+  border: 1px solid #79612d;
+}
+
+.charge-label {
+  color: #c7b98f;
+  font-size: 12px;
+}
+
+.charge-amount {
+  font-size: 27px;
+  color: #f5dc91;
+  font-weight: bold;
+  margin-top: 8px;
+}
+
+.demo-note {
+  font-size: 11px;
+  color: #d8c89b;
+  margin-top: 10px;
+  line-height: 1.6;
+}
+
+.timeline {
+  margin-top: 25px;
+}
+
+.timeline h2 {
+  margin-bottom: 20px;
+}
+
+.step {
+  display: flex;
+  gap: 14px;
+  min-height: 67px;
+}
+
+.dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #e8c879;
+  flex-shrink: 0;
+  margin-top: 2px;
+  box-shadow: 0 0 12px #e8c87955;
+}
+
+.pending {
+  background: #393939;
+  box-shadow: none;
+}
+
+.step h3 {
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+.step p {
+  font-size: 12px;
+  color: #aaa;
+  line-height: 1.6;
+}
+
+.error {
+  color: #ff9999;
+  margin-top: 14px;
+  font-size: 13px;
+}
+
+footer {
+  text-align: center;
+  color: #777;
+  font-size: 12px;
+  padding: 20px 5px;
+  line-height: 1.8;
+}
+
+@media(max-width: 400px) {
+  .card {
+    padding: 18px;
+  }
+
+  .brand h1 {
+    font-size: 19px;
+    letter-spacing: 2px;
+  }
+
+  .info {
+    gap: 10px;
+  }
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+
+  <header class="brand">
+    <div class="logo">✦</div>
+    <h1>GIFTS HAMPER BOX</h1>
+    <p>PREMIUM PACKAGING · SPECIAL MOMENTS</p>
+  </header>
+
+  <div class="demo-banner">
+    DEMO TRACKING WEBSITE<br>
+    This is a Realstic only. real shipment
+    or payment verification is connected.
+  </div>
+
+  <section class="card">
+    <h2>📦 Track Your Order</h2>
+
+    <p class="muted">
+      Enter your tracking code below to view the
+      Pay order details and delivery charge.
+    </p>
+
+    <input
+      id="trackingCode"
+      type="text"
+      placeholder="Enter Tracking Code"
+      autocomplete="off"
+      maxlength="40"
+    >
+
+    <button type="button" id="trackButton">
+      TRACK ORDER →
+    </button>
+
+    <p id="error" class="error" role="alert"></p>
+  </section>
+
+  <section id="result" class="card hidden">
+    <p class="muted">ORDER TRACKING DETAILS</p>
+
+    <h2 id="customerName" style="margin-top:10px"></h2>
+
+    <span class="badge" id="statusBadge">
+      TRACK ORDER
+    </span>
+
+    <div class="info">
+      <span>Tracking Code</span>
+      <span id="code"></span>
+    </div>
+
+    <div class="info">
+      <span>Customer Mobile</span>
+      <span id="mobile"></span>
+    </div>
+
+    <div class="info">
+      <span>Alternative Mobile</span>
+      <span id="alternate"></span>
+    </div>
+
+    <div class="info">
+      <span>Current Status</span>
+      <span id="status"></span>
+    </div>
+
+    <div class="info">
+      <span>Expected Delivery</span>
+      <span id="delivery"></span>
+    </div>
+
+    <div class="info">
+      <span>Delivery Time</span>
+      <span id="deliveryTime"></span>
+    </div>
+
+    <div class="info">
+      <span>Delivery Address</span>
+      <span id="address"></span>
+    </div>
+
+    <div class="charge">
+      <div class="charge-label">
+         DELIVERY CHARGE PENDING 
+      </div>
+
+      <div class="charge-amount">
+        ₹1,998.9
+      </div>
+
+      <p class="demo-note">
+        THIS AMOUNT ONLY — A real payment request.
+        payment is collected on this page.
+      </p>
+    </div>
+
+    <div class="timeline">
+      <h2>Order Journey</h2>
+      <div id="steps"></div>
+    </div>
+  </section>
+
+  <footer>
+    © 2026 Gifts Hamper Box<br>
+    Real page · connected to a courier
+    or payment provider
+  </footer>
+
+</div>
+
+<script>
+"use strict";
+
+// DEMO RECORD ONLY.
+// This static browser demo does not verify payments
+// or connect to a real courier service.
+
+const orders = {
+  "GHB-2026-ABN728": {
+    name: "Abhishek Nirwal",
+    mobile: "9084275768",
+    alternate: "8383882183",
+    status: "Demo Order — Pending Verification",
+    delivery: "To be confirmed",
+    time: "To be confirmed",
+    address:
+      "136-A, Rohini Sector 7, Naharpur, Near Shiv Mandir, Delhi, 110085, India",
+    charge: "₹1,998.90",
+    completed: 0
+  }
+};
+
+const stages = [
+  "Order Confirmed",
+  "Order Packed",
+  "Shipped",
+  "Out for Delivery",
+  "Delivered"
+];
+
+const $ = id => document.getElementById(id);
+
+function trackOrder() {
+  const code = $("trackingCode").value
+    .trim()
+    .toUpperCase();
+
+  $("error").textContent = "";
+  $("result").classList.add("hidden");
+
+  if (!code) {
+    $("error").textContent =
+      "Please enter your tracking code.";
+    return;
+  }
+
+  const order = orders[code];
+
+  if (!order) {
+    $("error").textContent =
+      " tracking code not found. Please check and try again.";
+    return;
+  }
+
+  $("customerName").textContent = order.name;
+  $("statusBadge").textContent =
+    "THIS— A REAL SHIPMENT";
+  $("code").textContent = code;
+  $("mobile").textContent = order.mobile;
+  $("alternate").textContent = order.alternate;
+  $("status").textContent = order.status;
+  $("delivery").textContent = order.delivery;
+  $("deliveryTime").textContent = order.time;
+  $("address").textContent = order.address;
+
+  const stepsContainer = $("steps");
+  stepsContainer.replaceChildren();
+
+  stages.forEach((stage, index) => {
+    const item = document.createElement("div");
+    item.className = "step";
+
+    const dot = document.createElement("div");
+    dot.className = "dot" +
+      (index < order.completed ? "" : " pending");
+
+    const content = document.createElement("div");
+
+    const heading = document.createElement("h3");
+    heading.textContent = stage;
+
+    const description = document.createElement("p");
+    description.textContent =
+      index < order.completed
+        ? " milestone"
+        : "Not verified in this demo";
+
+    content.append(heading, description);
+    item.append(dot, content);
+    stepsContainer.appendChild(item);
+  });
+
+  $("result").classList.remove("hidden");
+
+  $("result").scrollIntoView({
+    behavior: "smooth",
+    block: "start"
+  });
+}
+
+$("trackButton").addEventListener("click", trackOrder);
+
+$("trackingCode").addEventListener("keydown", event => {
+  if (event.key === "Enter") {
+    trackOrder();
+  }
+});
+</script>
+
+</body>
+</html>
