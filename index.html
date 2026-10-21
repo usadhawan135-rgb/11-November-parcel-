@@ -4,102 +4,277 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#090b10">
 <title>Gifts Hamper Box | Order Tracking</title>
+
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
-body{
-  font-family:Arial,sans-serif;
-  background:#090b10;color:#fff;
-  min-height:100vh;padding:22px 14px;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
-.container{max-width:650px;margin:auto}
-.brand{text-align:center;margin:15px 0 28px}
-.logo{font-size:42px;color:#e8c879}
-.brand h1{letter-spacing:3px;font-size:23px;margin:10px 0}
-.brand p{color:#aaa;font-size:12px;letter-spacing:1px}
-.demo-banner{
-  background:#29230f;color:#f5dc91;
-  border:1px solid #80662c;padding:12px;
-  border-radius:10px;text-align:center;
-  font-size:12px;margin-bottom:18px;line-height:1.6;
+
+body {
+  font-family: Arial, sans-serif;
+  background: #090b10;
+  color: #fff;
+  min-height: 100vh;
+  padding: 22px 14px;
 }
-.card{
-  background:linear-gradient(145deg,#1b1d25,#101116);
-  border:1px solid #34313a;border-radius:20px;
-  padding:23px;margin-bottom:18px;
-  box-shadow:0 12px 35px #0006;
+
+.container {
+  max-width: 650px;
+  margin: auto;
 }
-h2{font-size:19px;margin-bottom:10px}
-.muted{color:#aaa;font-size:13px;line-height:1.7}
-input,button{
-  width:100%;padding:15px;border-radius:10px;
-  font-size:15px;margin-top:14px;
+
+.brand {
+  text-align: center;
+  margin: 15px 0 28px;
 }
-input{
-  background:#090b10;color:white;
-  border:1px solid #49434b;outline:none;
+
+.logo {
+  font-size: 42px;
+  color: #e8c879;
 }
-input:focus{border-color:#e8c879}
-button{
-  background:linear-gradient(90deg,#b88b35,#f5df9a);
-  color:#17130a;font-weight:bold;border:0;cursor:pointer;
+
+.brand h1 {
+  letter-spacing: 3px;
+  font-size: 23px;
+  margin: 10px 0;
 }
-button:hover{opacity:.9}
-.hidden{display:none}
-.badge{
-  display:inline-block;color:#f5dc91;
-  background:#5b471b55;border:1px solid #b89545;
-  padding:8px 12px;border-radius:30px;
-  font-size:11px;margin:10px 0;
+
+.brand p {
+  color: #aaa;
+  font-size: 12px;
+  letter-spacing: 1px;
 }
-.info{
-  display:flex;justify-content:space-between;
-  align-items:flex-start;gap:15px;
-  padding:14px 0;border-bottom:1px solid #333;
+
+.demo-banner {
+  background: #171c19;
+  color: #a7d9b1;
+  border: 1px solid #34543e;
+  padding: 12px;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 12px;
+  margin-bottom: 18px;
+  line-height: 1.7;
 }
-.info span:first-child{
-  color:#aaa;font-size:13px;flex:1;
+
+.card {
+  background: linear-gradient(145deg, #1b1d25, #101116);
+  border: 1px solid #34313a;
+  border-radius: 20px;
+  padding: 23px;
+  margin-bottom: 18px;
+  box-shadow: 0 12px 35px #0006;
 }
-.info span:last-child{
-  text-align:right;font-size:13px;
-  flex:1.4;overflow-wrap:anywhere;
+
+h2 {
+  font-size: 19px;
+  margin-bottom: 10px;
 }
-.location-box{
-  background:#161b19;border:1px solid #3d5c46;
-  padding:16px;border-radius:12px;margin-top:18px;
+
+.muted {
+  color: #aaa;
+  font-size: 13px;
+  line-height: 1.7;
 }
-.location-label{color:#a5d6ad;font-size:12px}
-.location-value{
-  color:#e5f5e8;font-size:18px;
-  font-weight:bold;margin-top:8px;
+
+input, button {
+  width: 100%;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 15px;
+  margin-top: 14px;
 }
-.location-note{
-  color:#aaa;font-size:11px;
-  line-height:1.6;margin-top:8px;
+
+input {
+  background: #090b10;
+  color: white;
+  border: 1px solid #49434b;
+  outline: none;
 }
-.timeline{margin-top:25px}
-.timeline h2{margin-bottom:20px}
-.step{display:flex;gap:14px;min-height:75px}
-.dot{
-  width:16px;height:16px;border-radius:50%;
-  background:#e8c879;flex-shrink:0;margin-top:2px;
-  box-shadow:0 0 12px #e8c87955;
+
+input:focus {
+  border-color: #e8c879;
 }
-.pending{background:#393939;box-shadow:none}
-.step h3{font-size:14px;margin-bottom:6px}
-.step p{font-size:12px;color:#aaa;line-height:1.6}
-.error{color:#ff9999;margin-top:14px;font-size:13px}
-footer{
-  text-align:center;color:#777;font-size:12px;
-  padding:20px 5px;line-height:1.8;
+
+button {
+  background: linear-gradient(90deg, #b88b35, #f5df9a);
+  color: #17130a;
+  font-weight: bold;
+  border: 0;
+  cursor: pointer;
 }
-@media(max-width:400px){
-  .card{padding:18px}
-  .brand h1{font-size:19px;letter-spacing:2px}
-  .info{gap:10px}
+
+button:hover {
+  opacity: .9;
+}
+
+.hidden {
+  display: none;
+}
+
+.badge {
+  display: inline-block;
+  color: #a7e8b6;
+  background: #173522;
+  border: 1px solid #35844d;
+  padding: 8px 12px;
+  border-radius: 30px;
+  font-size: 11px;
+  margin: 10px 0;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 15px;
+  padding: 14px 0;
+  border-bottom: 1px solid #333;
+}
+
+.info span:first-child {
+  color: #aaa;
+  font-size: 13px;
+  flex: 1;
+}
+
+.info span:last-child {
+  text-align: right;
+  font-size: 13px;
+  flex: 1.4;
+  overflow-wrap: anywhere;
+}
+
+.location-box {
+  background: #161b19;
+  border: 1px solid #3d5c46;
+  padding: 16px;
+  border-radius: 12px;
+  margin-top: 20px;
+}
+
+.location-label {
+  color: #a5d6ad;
+  font-size: 13px;
+}
+
+.location-value {
+  color: #e5f5e8;
+  font-size: 19px;
+  font-weight: bold;
+  margin-top: 10px;
+  line-height: 1.5;
+}
+
+.location-note {
+  color: #aaa;
+  font-size: 11px;
+  line-height: 1.6;
+  margin-top: 8px;
+}
+
+.timeline {
+  margin-top: 28px;
+}
+
+.timeline h2 {
+  margin-bottom: 24px;
+}
+
+.step {
+  display: flex;
+  gap: 14px;
+  min-height: 75px;
+}
+
+.dot {
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  background: #35d06a;
+  flex-shrink: 0;
+  margin-top: 2px;
+  box-shadow: 0 0 12px #35d06a66;
+}
+
+/* Upcoming steps */
+.dot.pending {
+  background: #393939;
+  box-shadow: none;
+}
+
+/* Shipped circle blinks green */
+.dot.shipped-active {
+  background: #35d06a;
+  animation: shippedBlink 1.4s ease-in-out infinite;
+}
+
+@keyframes shippedBlink {
+  0%, 100% {
+    opacity: 1;
+    box-shadow: 0 0 14px #35d06a99;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: .35;
+    box-shadow: 0 0 3px #35d06a33;
+    transform: scale(.88);
+  }
+}
+
+.step h3 {
+  font-size: 14px;
+  margin-bottom: 7px;
+}
+
+.step p {
+  font-size: 12px;
+  color: #aaa;
+  line-height: 1.6;
+}
+
+.error {
+  color: #ff9999;
+  margin-top: 14px;
+  font-size: 13px;
+}
+
+footer {
+  text-align: center;
+  color: #777;
+  font-size: 12px;
+  padding: 20px 5px;
+  line-height: 1.8;
+}
+
+@media (max-width: 400px) {
+  .card {
+    padding: 18px;
+  }
+
+  .brand h1 {
+    font-size: 19px;
+    letter-spacing: 2px;
+  }
+
+  .info {
+    gap: 10px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dot.shipped-active {
+    animation: none;
+  }
 }
 </style>
 </head>
+
 <body>
 <div class="container">
 
@@ -110,21 +285,25 @@ footer{
   </header>
 
   <div class="demo-banner">
-    PARCEL TRACKING <br>
-    Location and status shown here
-    and are verified by a courier.
+    📦 PARCEL TRACKING <br>
+    Displayed shipment status and location and are A live courier data.
   </div>
 
   <section class="card">
     <h2>📦 Track Your Order</h2>
+
     <p class="muted">
-      Enter your tracking code to view your order
-      status and delivery details.
+      Enter your tracking code below to view
+      the order status and delivery details.
     </p>
 
-    <input id="trackingCode" type="text"
+    <input
+      id="trackingCode"
+      type="text"
       placeholder="Enter Tracking Code"
-      autocomplete="off" maxlength="40">
+      autocomplete="off"
+      maxlength="40"
+    >
 
     <button type="button" id="trackButton">
       TRACK ORDER →
@@ -135,44 +314,56 @@ footer{
 
   <section id="result" class="card hidden">
     <p class="muted">ORDER TRACKING DETAILS</p>
+
     <h2 id="customerName" style="margin-top:10px"></h2>
+
     <span class="badge" id="statusBadge"></span>
 
     <div class="info">
       <span>Tracking Code</span>
       <span id="code"></span>
     </div>
+
     <div class="info">
       <span>Customer Mobile</span>
       <span id="mobile"></span>
     </div>
+
     <div class="info">
       <span>Alternative Mobile</span>
       <span id="alternate"></span>
     </div>
+
     <div class="info">
       <span>Current Status</span>
       <span id="status"></span>
     </div>
+
     <div class="info">
       <span>Expected Delivery</span>
       <span id="delivery"></span>
     </div>
+
     <div class="info">
       <span>Delivery Time</span>
       <span id="deliveryTime"></span>
     </div>
+
     <div class="info">
       <span>Delivery Address</span>
       <span id="address"></span>
     </div>
 
     <div class="location-box">
-      <div class="location-label">📍  PARCEL LOCATION</div>
+      <div class="location-label">
+        📍 PARCEL LOCATION ·
+      </div>
+
       <div class="location-value" id="location"></div>
+
       <p class="location-note">
-         This live GPS data
-        and  verified by a courier Shop.
+         This page A
+         access live GPS or courier tracking data.
       </p>
     </div>
 
@@ -184,12 +375,16 @@ footer{
 
   <footer>
     © 2026 Gifts Hamper Box<br>
-    Parecl tracking page ·A live courier connection
+    tracking page · A live courier connection
   </footer>
+
 </div>
 
 <script>
 "use strict";
+
+// Demonstration record only.
+// Statuses and location are not courier-verified.
 
 const orders = {
   "GHB-2026-ABN728": {
@@ -197,7 +392,6 @@ const orders = {
     mobile: "9084275768",
     alternate: "8383882183",
     status: "Shipped",
-    location: "100 km from Gujrat ",
     delivery: "To be confirmed",
     time: "To be confirmed",
     address:
@@ -217,7 +411,9 @@ const stages = [
 const $ = id => document.getElementById(id);
 
 function trackOrder() {
-  const code = $("trackingCode").value.trim().toUpperCase();
+  const code = $("trackingCode").value
+    .trim()
+    .toUpperCase();
 
   $("error").textContent = "";
   $("result").classList.add("hidden");
@@ -255,17 +451,25 @@ function trackOrder() {
     item.className = "step";
 
     const dot = document.createElement("div");
-    dot.className =
-      "dot" + (index < order.completed ? "" : " pending");
+
+    if (index === 2 && order.status === "Shipped") {
+      dot.className = "dot shipped-active";
+    } else if (index < order.completed) {
+      dot.className = "dot";
+    } else {
+      dot.className = "dot pending";
+    }
 
     const content = document.createElement("div");
+
     const heading = document.createElement("h3");
     heading.textContent = stage;
 
     const description = document.createElement("p");
+
     description.textContent =
       index < order.completed
-        ? "Completed ( status)"
+        ? "Completed (status)"
         : "Awaiting update";
 
     content.append(heading, description);
@@ -274,6 +478,7 @@ function trackOrder() {
   });
 
   $("result").classList.remove("hidden");
+
   $("result").scrollIntoView({
     behavior: "smooth",
     block: "start"
@@ -283,8 +488,11 @@ function trackOrder() {
 $("trackButton").addEventListener("click", trackOrder);
 
 $("trackingCode").addEventListener("keydown", event => {
-  if (event.key === "Enter") trackOrder();
+  if (event.key === "Enter") {
+    trackOrder();
+  }
 });
 </script>
+
 </body>
 </html>
